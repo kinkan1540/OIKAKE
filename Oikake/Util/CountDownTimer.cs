@@ -27,6 +27,12 @@ namespace Oikake.Util
         {
             return CurrentTime <= 0.0f;
         }
+
+        public override float Rate()
+        {
+            return 1.0f - CurrentTime / limitTime;
+        }
+
         public override void Update(GameTime gameTime)
         {
             CurrentTime = Math.Max(CurrentTime - 1f, 0.0f);

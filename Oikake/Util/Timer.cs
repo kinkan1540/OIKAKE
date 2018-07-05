@@ -11,7 +11,7 @@ namespace Oikake.Util
     {
         protected float limitTime;
         protected float CurrentTime;
-
+        public abstract float Rate();
         public Timer(float second)
         {
             limitTime = 60 * second;

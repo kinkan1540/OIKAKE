@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/timer.bmp</SourceFile>
+  <SourceFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/timer.bmp</SourceFile>
   <SourceTime>2012-03-19T09:36:28+09:00</SourceTime>
-  <DestFile>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/bin/Windows/timer.xnb</DestFile>
-  <DestTime>2018-06-25T17:21:30.6497772+09:00</DestTime>
+  <DestFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/bin/Windows/timer.xnb</DestFile>
+  <DestTime>2018-06-29T09:48:02.8015028+09:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

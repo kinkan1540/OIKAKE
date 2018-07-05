@@ -67,7 +67,7 @@ namespace Oikake
         protected override void LoadContent()
 
         {
-            //renderer = new Renderer(Content, GraphicsDevice);
+            renderer = new Renderer(Content, GraphicsDevice);
             renderer = gameDevice.GetRenderer();
 
             // この下にロジックを記述
@@ -80,6 +80,16 @@ namespace Oikake
             renderer.LoadContent("title");
             renderer.LoadContent("white");
             renderer.LoadContent("pipo-btleffect");
+            renderer.LoadContent("oikake_enemy_4anime");
+            renderer.LoadContent("oikake_player_4anime");
+            renderer.LoadContent("puddle");
+
+            //1ピクセル黒画像の生成
+            Texture2D fade = new Texture2D(GraphicsDevice, 1, 1);
+            Color[] colors = new Color[1 * 1];
+            colors[0] = new Color(0, 0, 0);
+            fade.SetData(colors);
+            renderer.LoadContent("fade",fade);
 
             Sound sound = gameDevice.GetSound();
             string filepach = "./Sound/";

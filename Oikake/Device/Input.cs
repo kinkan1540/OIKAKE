@@ -16,10 +16,14 @@ namespace Oikake.Device
         private static MouseState previousMouse;
         public static void Update()
         {
+            //キーボード
             previousKey = currentKey;
             currentKey = Keyboard.GetState();
+            //マウス
             previousMouse = currentMouse;
             currentMouse = Mouse.GetState();
+            //更新
+            UpdateVelocity();
         }
         public static Vector2 Velocity()
         {
@@ -32,9 +36,9 @@ namespace Oikake.Device
         {
             velocity = Vector2.Zero;
             if (currentKey.IsKeyDown(Keys.Right))
-            { velocity.X -= 1; }
-            if (currentKey.IsKeyDown(Keys.Left))
             { velocity.X += 1; }
+            if (currentKey.IsKeyDown(Keys.Left))
+            { velocity.X -= 1; }
             if (currentKey.IsKeyDown(Keys.Up))
             { velocity.Y -= 1; }
             if (currentKey.IsKeyDown(Keys.Down))

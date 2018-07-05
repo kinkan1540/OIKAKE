@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/title.BMP</SourceFile>
-  <SourceTime>2012-03-19T10:06:20+09:00</SourceTime>
-  <DestFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/bin/Windows/title.xnb</DestFile>
-  <DestTime>2018-06-29T09:09:38.1437738+09:00</DestTime>
+  <SourceFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/puddle.png</SourceFile>
+  <SourceTime>2016-07-16T19:42:32+09:00</SourceTime>
+  <DestFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/bin/Windows/puddle.xnb</DestFile>
+  <DestTime>2018-06-29T09:25:41.6514624+09:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

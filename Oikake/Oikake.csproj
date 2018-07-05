@@ -62,11 +62,14 @@
     <Compile Include="Scene\IScene.cs" />
     <Compile Include="Scene\Scene.cs" />
     <Compile Include="Scene\SceneManager.cs" />
+    <Compile Include="Scene\ScenFader.cs" />
     <Compile Include="Scene\Score.cs" />
     <Compile Include="Scene\TimerUI.cs" />
     <Compile Include="Scene\Title.cs" />
     <Compile Include="Util\CountDownTimer.cs" />
     <Compile Include="Util\CountUpTimer.cs" />
+    <Compile Include="Util\Motion.cs" />
+    <Compile Include="Util\Range.cs" />
     <Compile Include="Util\Timer.cs" />
   </ItemGroup>
   <ItemGroup>

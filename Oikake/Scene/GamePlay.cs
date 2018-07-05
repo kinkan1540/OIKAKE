@@ -19,8 +19,7 @@ namespace Oikake.Scene
         private Score score;
         private Timer timer;
         private TimerUI timerUI;
-        bool A = false;
-        int B = 0;
+    
         private bool IsEndFlag;
         private Sound sound;
 

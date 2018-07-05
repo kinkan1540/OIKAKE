@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/titlese.wav</SourceFile>
+  <SourceFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/titlese.wav</SourceFile>
   <SourceTime>2010-09-10T17:56:00+09:00</SourceTime>
-  <DestFile>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/bin/Windows/titlese.xnb</DestFile>
-  <DestTime>2018-06-25T17:21:32.3656138+09:00</DestTime>
+  <DestFile>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/bin/Windows/titlese.xnb</DestFile>
+  <DestTime>2018-06-29T09:09:39.8544135+09:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

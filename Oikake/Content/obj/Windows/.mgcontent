@@ -4,26 +4,29 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/ending.BMP</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/endingbgm.mp3</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/endingse.wav</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/gameplaybgm.mp3</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/gameplayse.wav</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/number.bmp</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/score.bmp</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/stage.BMP</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/timer.bmp</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/title.BMP</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/titlebgm.mp3</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/titlese.wav</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/white.BMP</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/black.BMP</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/pipo-btleffect.png</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/Sound/endingbgm.mp3</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/Sound/endingse.wav</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/Sound/gameplaybgm.mp3</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/Sound/gameplayse.wav</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/Sound/titlebgm.mp3</File>
-    <File>D:/学校/K018A1540/mongame/Oikake/trunk/Oikake/Oikake/Content/Sound/titlese.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/ending.BMP</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/endingbgm.mp3</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/endingse.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/gameplaybgm.mp3</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/gameplayse.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/number.bmp</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/score.bmp</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/stage.BMP</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/timer.bmp</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/title.BMP</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/titlebgm.mp3</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/titlese.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/white.BMP</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/black.BMP</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/pipo-btleffect.png</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/Sound/endingbgm.mp3</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/Sound/endingse.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/Sound/gameplaybgm.mp3</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/Sound/gameplayse.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/Sound/titlebgm.mp3</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/Sound/titlese.wav</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/oikake_enemy_4anime.bmp</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/oikake_player_4anime.bmp</File>
+    <File>D:/学校/K018A1540/mongame/gitoikake/Oikake/Content/puddle.png</File>
   </SourceFiles>
 </SourceFileCollection>

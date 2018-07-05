@@ -16,6 +16,7 @@ namespace Oikake.Device
         private ContentManager contentManager; //コンテンツ管理者
         private GraphicsDevice graphicsDevice; //グラフィック機器
         private SpriteBatch spriteBatch; //スプライト一括描画用オブジェクト
+        private GameTime gameTime;
 
         //複数画像管理用変数の宣言と生成
         private Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
@@ -52,6 +53,48 @@ namespace Oikake.Device
             //画像の読み込みとDictionaryへアセット名と画像を登録
             textures.Add(assetName, contentManager.Load<Texture2D>(filepath + assetName));
 
+        }
+
+        public void LoadContent(string assetName,Texture2D texture)
+        {
+            //すでにキー(assetName:アセット名)が登録されているとき
+            if(textures.ContainsKey(assetName))
+            {
+#if DEBUG//DEBUGモードの時のみ下記のエラー文をコンソールへ表示
+                Console.WriteLine(assetName+"はすでに読みこまれています。＼n"+"プログラムを確認してください");
+#endif
+                //それ以上は読みこまないので終了
+                return;
+            }
+            textures.Add(assetName, texture);
+                  
+        }
+
+        /// <summary>
+        /// アセット名
+        /// </summary>
+        /// <param name="assetName">アセット名</param>
+        /// <param name="position">位置</param>
+        /// <param name="rect">切り出し範囲</param>
+        /// <param name="rotate">回転角度</param>
+        /// <param name="rotatePosition">回転軸位置</param>
+        /// <param name="scal">拡大縮小</param>
+        /// <param name="effects">表示反転位置</param>
+        /// <param name="depth">スプライト深度</param>
+        /// <param name="alpha">透明値</param>
+        public void DrawTexture(string assetName,Vector2 position,Rectangle?rect,float rotate,Vector2 rotatePosition,Vector2 scal,SpriteEffects effects=SpriteEffects.None,float depth=0.0f,float alpha=1.0f)
+        {
+            spriteBatch.Draw(
+                textures[assetName],//テクスチャ
+                position,//位置
+                rect,//切り取り範囲
+                Color.White * alpha,//透明値
+                rotate,//回転角度
+                rotatePosition,//回転軸
+                scal,//縮小拡大
+                effects,//表示反転効果
+                depth//スプライト深度
+                );
         }
 
         /// <summary>
@@ -171,6 +214,22 @@ namespace Oikake.Device
                 }
                 postion.X += width;
             }
+        }
+
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="gameTime"></param>
+        public void Update(GameTime gameTime)
+        {
+            //デバイスで絶対に一回のみ更新が必要なもの
+            Input.Update();
+            this.gameTime = gameTime;
+        }
+
+        public GameTime GetGameTime()
+        {
+            return gameTime;
         }
     }
 }

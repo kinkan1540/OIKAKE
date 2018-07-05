@@ -22,6 +22,12 @@ namespace Oikake.Util
         {
             return CurrentTime >= limitTime;
         }
+
+        public override float Rate()
+        {
+            return CurrentTime / limitTime;
+        }
+
         public override void Update(GameTime gameTime)
         {
             CurrentTime = Math.Min(CurrentTime + 1f, 0.0f);
