@@ -20,6 +20,16 @@ namespace Oikake.Actor
         public abstract void Hit(Character other);
 
         /// <summary>
+        /// 位置の受け渡し
+        /// (引数で渡された変数に自分の位置を渡す)
+        /// </summary>
+        /// <param name="other">位置を送りたい相手</param>
+        public void SetPosition(ref Vector2 other)
+        {
+            other = position;
+        }
+
+        /// <summary>
         /// コンストラクタ
         /// </summary>
         /// <param name="name">画像の名前</param>

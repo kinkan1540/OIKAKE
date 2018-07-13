@@ -50,7 +50,7 @@ namespace Oikake.Scene
                     break;
                 case SceneFaderState.None:
                     DrawFadeNone(renderer);
-                    break
+                    break;
             }
         }
     
@@ -187,7 +187,7 @@ namespace Oikake.Scene
         /// フェードなし状態の描画
         /// </summary>
         /// <param name="renderer"></param>
-        private void DarwFadeNone(Renderer renderer)
+        private void DrawFadeNone(Renderer renderer)
         {
             scene.Draw(renderer);
         }

@@ -50,10 +50,10 @@ namespace Oikake
             gameDevice = GameDevice.Instance(Content, GraphicsDevice);
             // この下にロジックを記述
             sceneManager = new SceneManager();
-            sceneManager.Add(Scene.Scene.Title, new Title());
+            sceneManager.Add(Scene.Scene.Title, new ScenFader(new Title()));
             IScene addScene = new GamePlay();
             sceneManager.Add(Scene.Scene.GamePlay, addScene);
-            sceneManager.Add(Scene.Scene.Ending, new Ending(addScene));
+            sceneManager.Add(Scene.Scene.Ending, new ScenFader(new Ending( addScene)));
             sceneManager.Change(Scene.Scene.Title);
 
             // この上にロジックを記述

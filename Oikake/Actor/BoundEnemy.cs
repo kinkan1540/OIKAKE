@@ -22,7 +22,7 @@ namespace Oikake.Actor
             position = new Vector2(
                 rnd.Next(Screen.Width - 64),
                 rnd.Next(Screen.Height - 64));
-            velocity = new Vector2(rnd.Next(-25,26), rnd.Next(-25,26));
+           velocity = new Vector2(rnd.Next(40,80), rnd.Next(40,80));
         }
         public override void Shutdown()
         {

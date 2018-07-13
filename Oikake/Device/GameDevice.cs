@@ -18,6 +18,7 @@ namespace Oikake.Device
         private static Random random;
         private ContentManager content;
         private GraphicsDevice graphics;
+        private GameTime gameTime;
         
         private GameDevice(ContentManager content,GraphicsDevice graphics)
         {
@@ -27,6 +28,7 @@ namespace Oikake.Device
             this.content = content;
             this.graphics = graphics;
         }
+
         public static GameDevice Instance(ContentManager content,GraphicsDevice graphics)
         {
             if(instance==null)
@@ -45,7 +47,9 @@ namespace Oikake.Device
         { }
         public void Update(GameTime gametime)
         {
+            //ディバイスで絶対に一回のみ更新が必要なもの
             Input.Update();
+            this.gameTime = gametime;
         }
         public Renderer GetRenderer()
         {
@@ -66,6 +70,10 @@ namespace Oikake.Device
         public GraphicsDevice GetGraphicsDevice()
         {
             return graphics;
+        }
+        public GameTime GetGameTime()
+        {
+            return gameTime;
         }
     }
 }

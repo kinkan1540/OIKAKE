@@ -22,7 +22,7 @@ namespace Oikake.Scene
     
         private bool IsEndFlag;
         private Sound sound;
-
+     
         public GamePlay()
         {
             IsEndFlag = false;
@@ -30,7 +30,7 @@ namespace Oikake.Scene
             sound = gameDevice.GetSound();
         }
         public void Draw(Renderer renderer)
-        {
+        {   
             renderer.Begin();
             renderer.DrawTexture("stage", Vector2.Zero);
             characterManager.Draw(renderer);
@@ -47,12 +47,17 @@ namespace Oikake.Scene
 
         public void Initialize()
         {
+
             IsEndFlag = false;
 
+            Player player = new Player(this);
             characterManager = new CharacterManager();
+            characterManager.Initialize();
             characterManager.Add(new Player(this));
-            characterManager.Add(new Enemy(this));
             characterManager.Add(new BoundEnemy(this));
+            characterManager.Add(new Enemy(this, new BoudAI()));
+            characterManager.Add(player);
+            characterManager.Add(new Enemy(this, new AttackAI(player)));
             for (int i = 0; i < 10; i++)
             {
                 characterManager.Add(new RandomEnemy(this));
@@ -80,40 +85,11 @@ namespace Oikake.Scene
        
         public void Update(GameTime gameTime)
         {
-            
+            characterManager.Update(gameTime);
             score.Update(gameTime);
             Input.Update();
             sound.PlayBGM("gameplaybgm");
-            //B++;
-            //if (B == 5)
-            //{
-            //    A = false;
-            //}
-            // この下に更新ロジックを記述
-            characterManager.Update(gameTime);
-            //randomEnemy.Update(gameTime);
-            
-            //if (Input.GetKeyState(Keys.Z))
-            //{
-            //    if (A == false)
-            //    {
-            //        Vector2 velocity = player.GetVelocity();
-
-            //        if (velocity.Length() == 0)
-            //        {
-            //            velocity = new Vector2(10, 0);
-            //        }
-            //        bullets.Add(new Bullet(player.GetPosition(), velocity));
-            //        A = true;
-            //        B = 0;
-            //    }
-            //}
-            //foreach (var bullet in bullets)
-            //{
-            //    bullet.Update(gameTime);
-            //}
-
-            //bullets.RemoveAll(bullets => bullets.IsDead());
+          
             timer.Update(gameTime);
             if (timer.IsTime() == true)
             {

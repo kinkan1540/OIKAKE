@@ -24,7 +24,6 @@ namespace Oikake.Actor
             isDeadFlag = true;
             
             mediator.AddActor(new RandomEnemy(mediator));
-            mediator.AddActor(new RandomEnemy(mediator));
             mediator.AddScore(10);
             mediator.AddActor(new BurstEffect(position, mediator));
         }

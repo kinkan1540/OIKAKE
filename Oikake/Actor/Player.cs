@@ -99,23 +99,23 @@ namespace Oikake.Actor
             //下向き
             for (int i = 0; i < 4; i++)
             {
-                motion.Add(i, new Rectangle(64 *i, 64 *0, 64, 64));
+                motion.Add(i, new Rectangle(64 *(i%4), 64 *(i/4), 64, 64));
             }            
             //上向き
             for(int i=4;i<8;i++)
-            motion.Add(i, new Rectangle(64 *0, 64 *1, 64, 64));
+            motion.Add(i, new Rectangle(64 *(i%4), 64 *(i/4), 64, 64));
 
             //右向き
             for(int i=8;i<12;i++)
             {
-                motion.Add(i, new Rectangle(64 * i&8, 64 * 2, 64, 64));
+                motion.Add(i, new Rectangle(64 * (i%4), 64 * (i/4), 64, 64));
             }
             //左向き
             for (int i = 12; i < 16; i++)
             {
-                motion.Add(i, new Rectangle(64 * i, 64 * 3, 64, 64));
+                motion.Add(i, new Rectangle(64 * (i%4), 64 * (i/4), 64, 64));
             }
-            //下向きの画像の範囲0～3と切り替えじかんを設定
+            //下向きの画像の範囲0～3と切り替え時間を設定
             motion.Initialize(new Range(0, 15), new CountDownTimer(0.2f));
             //最初は下向きに
             direction = Direction.DOWN;
@@ -130,8 +130,11 @@ namespace Oikake.Actor
         }
         public override void Update(GameTime gameTime)
         {
-            //移動量
-            float speed = 5.0f;
+            //キー入力の移動量を取得
+            Vector2 velocity = Input.Velocity();
+
+            //移動処理
+            float speed = 10.0f;
             position = position + Input.Velocity() * speed;
 
             if (position.X < 0.0f)
@@ -155,8 +158,34 @@ namespace Oikake.Actor
             var min = Vector2.Zero;
             var max = new Vector2(Screen.Width - 64, Screen.Height - 64);
             position = Vector2.Clamp(position, min, max);
+
             UpdateMotion();
             motion.Update(gameTime);
+
+            if(Input.GetKeyTrigger(Keys.Z))
+            {
+                //上下左右キーが押されていなければその向きに移動量を決定
+                if(velocity.Length()<0)
+                {
+                    Dictionary<Direction, Vector2> velocityDict = new Dictionary<Direction, Vector2>()
+                    {
+                        {Direction.LEFT,new Vector2(-1,0) },
+                        {Direction.RIHT,new Vector2(1,0) },
+                        {Direction.UO,new Vector2(0,-1) },
+                        {Direction.DOWN,new Vector2(0,1) },
+                    };
+                    velocity = velocityDict[direction];
+
+                }
+                //弾を発射
+                mediator.AddActor(
+                    new PlayerBullet(
+                        position,
+                        mediator,
+                        velocity
+                        ));
+            }
+         
         }
          public override void Hit(Character other)
         {
