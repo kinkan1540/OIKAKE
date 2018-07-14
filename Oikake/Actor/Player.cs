@@ -162,10 +162,10 @@ namespace Oikake.Actor
             UpdateMotion();
             motion.Update(gameTime);
 
-            if(Input.GetKeyTrigger(Keys.Z))
+            if(Input.GetKeyTrigger(Keys.Space))
             {
                 //上下左右キーが押されていなければその向きに移動量を決定
-                if(velocity.Length()<0)
+                if(velocity.Length()<=0)
                 {
                     Dictionary<Direction, Vector2> velocityDict = new Dictionary<Direction, Vector2>()
                     {
@@ -175,15 +175,13 @@ namespace Oikake.Actor
                         {Direction.DOWN,new Vector2(0,1) },
                     };
                     velocity = velocityDict[direction];
-
                 }
-                //弾を発射
                 mediator.AddActor(
-                    new PlayerBullet(
-                        position,
-                        mediator,
-                        velocity
-                        ));
+                   new PlayerBullet(
+                       position,
+                       mediator,
+                       velocity
+                       ));
             }
          
         }
