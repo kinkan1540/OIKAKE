@@ -231,5 +231,14 @@ namespace Oikake.Device
         {
             return gameTime;
         }
+        public void DrawTexture(string asseName,Vector2 position,Color color,float alpha=1.0f)
+        {
+            //デバックモード時のみ、画像描画前のアセット名をチェック
+            Debug.Assert(
+                textures.ContainsKey(asseName),
+                "描画時にアセット名の指定を間違えたか、" + "画像の読み込み自体が出来ていません");
+
+            spriteBatch.Draw(textures[asseName], position, color * alpha);
+        }
     }
 }

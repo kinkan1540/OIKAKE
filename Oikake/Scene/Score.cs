@@ -55,6 +55,14 @@ namespace Oikake.Scene
             }
             poolScore = 0;
         }
-
+        public int GetScore()
+        {
+            int curentScore = score + poolScore;
+            if (curentScore < 0)
+            {
+                curentScore = 0;
+            }
+            return curentScore;
+        }
     }
 }

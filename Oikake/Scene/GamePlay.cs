@@ -75,7 +75,13 @@ namespace Oikake.Scene
 
         public Scene Next()
         {
-            return Scene.Ending;
+            Scene nextScene = Scene.Ending;//通常はエンディングシーン
+            //一定得点以上だとGoodEndingシーン
+            if(score.GetScore()>=1000)
+            {
+                nextScene = Scene.GoodEnding;
+            }
+            return nextScene;
         }
 
         public void Shutdown()

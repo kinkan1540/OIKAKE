@@ -54,6 +54,7 @@ namespace Oikake
             IScene addScene = new GamePlay();
             sceneManager.Add(Scene.Scene.GamePlay, addScene);
             sceneManager.Add(Scene.Scene.Ending, new ScenFader(new Ending( addScene)));
+            sceneManager.Add(Scene.Scene.GoodEnding, new GoodEnding(addScene));
             sceneManager.Change(Scene.Scene.Title);
 
             // この上にロジックを記述

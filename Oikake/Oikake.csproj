@@ -48,6 +48,11 @@
     <Compile Include="Actor\BurstEffect.cs" />
     <Compile Include="Actor\Character.cs" />
     <Compile Include="Actor\CharacterManager.cs" />
+    <Compile Include="Actor\Effects\IParticleMediator.cs" />
+    <Compile Include="Actor\Effects\Particle.cs" />
+    <Compile Include="Actor\Effects\ParticleBule.cs" />
+    <Compile Include="Actor\Effects\ParticleFactory.cs" />
+    <Compile Include="Actor\Effects\ParticleManeger.cs" />
     <Compile Include="Actor\PlayerBullet.cs" />
     <Compile Include="Actor\RandomAI.cs" />
     <Compile Include="Actor\RandomEnemy.cs" />
@@ -65,6 +70,7 @@
     <Compile Include="Device\Renderer.cs" />
     <Compile Include="Scene\Ending.cs" />
     <Compile Include="Scene\GamePlay.cs" />
+    <Compile Include="Scene\GoodEnding.cs" />
     <Compile Include="Scene\IScene.cs" />
     <Compile Include="Scene\Scene.cs" />
     <Compile Include="Scene\SceneManager.cs" />

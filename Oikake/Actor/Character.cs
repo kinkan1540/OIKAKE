@@ -18,6 +18,13 @@ namespace Oikake.Actor
         protected bool isDeadFlag;
         protected IGameMediator mediator;
         public abstract void Hit(Character other);
+        protected enum State
+        {
+            Preparation,//準備
+            Dying,
+            Alive,//死に際
+            Dead//死亡
+        };
 
         /// <summary>
         /// 位置の受け渡し
